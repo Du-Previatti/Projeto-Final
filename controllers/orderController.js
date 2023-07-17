@@ -23,7 +23,7 @@ exports.createOrder = async (req, res) => {
   }
 };
 
-exports.getOrders = async (req, res) => {
+exports.getAllOrders = async (req, res) => {
   try {
     // Obtém o ID do usuário logado
     const userId = req.userId;
