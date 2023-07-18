@@ -4,7 +4,8 @@ const authMiddleware = require('../middlewares/authMiddleware');
 
 const router = express.Router();
 
-router.post('/register', userController.register);
+router.post('/registerUser', userController.registerUser);
+router.post('/registerAdmin', authMiddleware, userController.registerAdmin);
 router.post('/login', userController.login);
 router.delete('/:id', authMiddleware, userController.deleteUser);
 router.get('/protected', authMiddleware, (req, res) => {
