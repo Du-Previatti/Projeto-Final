@@ -15,7 +15,7 @@ app.use('/api/users', userRoutes);
 
 // Rotas com autenticação
 app.use('/api/categories', authMiddleware, categoryRoutes);
-app.use('/api/products', authMiddleware, productRoutes);
+app.use('/api/products', productRoutes);
 app.use('/api/orders', authMiddleware, orderRoutes); 
 
 app.listen(3000, () => {
