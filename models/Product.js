@@ -24,6 +24,6 @@ const Product = db.define('product', {
   }
 });
 
-Product.belongsTo(Category, { foreignKey: 'categoryId', as: 'category', tableName: 'categories' });
+Product.belongsTo(Category, { foreignKey: 'categoryId', as: 'category'});
 
 module.exports = Product;

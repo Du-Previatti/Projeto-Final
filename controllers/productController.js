@@ -2,7 +2,7 @@ const Product = require('../models/Product');
 
 exports.getAllProducts = async (req, res) => {
     try {
-      const products = await Product.findAll({ include: 'category' });
+      const products = await Product.findAll({ include: 'categories' });
       res.json(products);
     } catch (error) {
       res.status(500).json({ message: 'Error retrieving products', error: error.message });
@@ -12,7 +12,7 @@ exports.getAllProducts = async (req, res) => {
 
   exports.getProduct = async (req, res) => {
     try {
-      const product = await Product.findByPk(req.params.id, { include: 'category' });
+      const product = await Product.findByPk(req.params.id, { include: 'categories' });
       res.json(product);
     } catch (error) {
       res.status(500).json({ message: 'Error retrieving product', error: error.message });
