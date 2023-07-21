@@ -72,7 +72,7 @@ exports.login = async (req, res) => {
 
     const isAdmin = user.isAdmin; // Obtém o valor isAdmin do usuário
 
-    const token = jwt.sign({ email, isAdmin }, 'swordfish', { expiresIn: '1h' });
+    const token = jwt.sign({ email, isAdmin, id:user.id }, 'swordfish', { expiresIn: '1h' });
 
     res.status(200).json({ message: 'Authenticated successfully', token });
   } catch (error) {
