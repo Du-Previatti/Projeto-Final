@@ -1,13 +1,12 @@
 import { Header } from "../../components/header";
 
-export default function Sucesso () {
-    return (
-
-<div>
-<Header />
-<div className=" w-100% h-[800px] bg-green-500 flex justify-center align-middle">
-<h1 className="mt-[300px] text-9xl">Compra Efetuada !!</h1>
-</div>
-</div>
-)
+export default function Sucesso() {
+  return (
+    <div>
+      <Header />
+      <div className="w-full min-h-screen bg-green-500 flex items-center justify-center">
+        <h1 className="text-4xl md:text-9xl text-white">Compra Efetuada!!</h1>
+      </div>
+    </div>
+  );
 }
